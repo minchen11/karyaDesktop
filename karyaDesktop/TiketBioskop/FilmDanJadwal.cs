@@ -58,5 +58,10 @@ namespace TiketBioskop
                 MessageBox.Show("error: " + error.Message);
             }
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
