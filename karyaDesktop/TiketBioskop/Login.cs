@@ -35,6 +35,7 @@ namespace TiketBioskop
 
             baca=check_data.ExecuteReader();
 
+         
             if (baca.Read()) 
             { 
                 FilmDanJadwal a = new FilmDanJadwal();
@@ -51,6 +52,7 @@ namespace TiketBioskop
       
         }
 
+        //Kondisi untuk show password
         private void CCBPassword_CheckedChanged(object sender, EventArgs e)
         {
             if (CCBPassword.Checked == true)
@@ -63,6 +65,7 @@ namespace TiketBioskop
             }
         }
 
+        //fungsi untuk password jadi bullet
         private void TXTPassword_TextChanged(object sender, EventArgs e)
         {
             TXTPassword.UseSystemPasswordChar = true;

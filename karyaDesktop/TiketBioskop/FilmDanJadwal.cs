@@ -26,6 +26,7 @@ namespace TiketBioskop
 
         }
 
+        //untuk pindah ke laman admin
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             admin a = new admin();
@@ -38,7 +39,8 @@ namespace TiketBioskop
             try
             {
                 conn.koneksi.Open();
-                string jadwal = "select jam_tayang,poster from film where nama_film = @namafilm";
+                CBX_JamTayang.Items.Clear();
+                string jadwal = "select  jam_tayang,poster from film where nama_film = @namafilm";
                 MySqlCommand query = new MySqlCommand(jadwal, conn.koneksi);
                 query.Parameters.AddWithValue("@namafilm", CBX_NamaFilm.Text);
                 MySqlDataReader read;
@@ -47,7 +49,7 @@ namespace TiketBioskop
 
                 while (read.Read())
                 {
-                    CBX_JamTayang.Text = read.GetString("jam_tayang");
+                    CBX_JamTayang.Items.Add(read.GetString("jam_tayang"));
                    // CBX_JamTayang.Items.Add(read("jam_tayang"));
                 }
                 conn.koneksi.Close();
@@ -62,6 +64,19 @@ namespace TiketBioskop
         private void pictureBox2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void FilmDanJadwal_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        //saat klik linklabel (next>>) bakal pindah ke form kursi
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Kursi a = new Kursi();
+            a.Show();
+            this.Hide();
         }
     }
 }
