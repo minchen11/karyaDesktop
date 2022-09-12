@@ -50,8 +50,13 @@ namespace TiketBioskop
                 while (read.Read())
                 {
                     CBX_JamTayang.Items.Add(read.GetString("jam_tayang"));
-                   // CBX_JamTayang.Items.Add(read("jam_tayang"));
+                   //PB1.ImageLocation = CBX_NamaFilm.Text;
+                    // CBX_JamTayang.Items.Add(read("jam_tayang"));
+                    PB1.Image = Image.FromFile(read.GetString("poster"));
+                    PB1.SizeMode = PictureBoxSizeMode.Zoom;
                 }
+
+               
                 conn.koneksi.Close();
 
             }
