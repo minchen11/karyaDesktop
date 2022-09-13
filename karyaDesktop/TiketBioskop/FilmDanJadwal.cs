@@ -15,6 +15,7 @@ namespace TiketBioskop
     public partial class FilmDanJadwal : Form
     {
         readonly Koneksi conn = new Koneksi();
+
        
 
         public FilmDanJadwal()
@@ -23,15 +24,7 @@ namespace TiketBioskop
             CBX_NamaFilm.DataSource = conn.showdatafilm();
             CBX_NamaFilm.ValueMember = "nama_film";
             CBX_NamaFilm.DisplayMember = "nama_film";
-
-        }
-
-        //untuk pindah ke laman admin
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            admin a = new admin();
-            a.Show();
-            this.Hide();
+           
         }
 
         private void CBX_NamaFilm_SelectedIndexChanged(object sender, EventArgs e)
@@ -40,7 +33,8 @@ namespace TiketBioskop
             {
                 conn.koneksi.Open();
                 CBX_JamTayang.Items.Clear();
-                string jadwal = "select  jam_tayang,poster from film where nama_film = @namafilm";
+
+                string jadwal = "select jam_tayang,poster from film where nama_film = @namafilm";
                 MySqlCommand query = new MySqlCommand(jadwal, conn.koneksi);
                 query.Parameters.AddWithValue("@namafilm", CBX_NamaFilm.Text);
                 MySqlDataReader read;
@@ -49,14 +43,13 @@ namespace TiketBioskop
 
                 while (read.Read())
                 {
+                    // CBX_JamTayang.Text = read.GetString("jam_tayang");
                     CBX_JamTayang.Items.Add(read.GetString("jam_tayang"));
-                   //PB1.ImageLocation = CBX_NamaFilm.Text;
-                    // CBX_JamTayang.Items.Add(read("jam_tayang"));
+                    //CBX_JamTayang.Items.AddRange("jam_tayang");
+
                     PB1.Image = Image.FromFile(read.GetString("poster"));
                     PB1.SizeMode = PictureBoxSizeMode.Zoom;
                 }
-
-               
                 conn.koneksi.Close();
 
             }
@@ -66,22 +59,24 @@ namespace TiketBioskop
             }
         }
 
-        private void pictureBox2_Click(object sender, EventArgs e)
+        public string Filmdanjadwal
         {
-
+            set { adminLevelToolStripMenuItem.Text = value; }
+            get { return adminLevelToolStripMenuItem.Text; }
+            
         }
 
-        private void FilmDanJadwal_Load(object sender, EventArgs e)
+        private void adminToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
-        }
-
-        //saat klik linklabel (next>>) bakal pindah ke form kursi
-        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            Kursi a = new Kursi();
+            admin a = new admin();
             a.Show();
-            this.Hide();
+         
+        }
+
+        private void ubahPasswordToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormUserAkun a = new FormUserAkun();
+            a.Show();
         }
     }
 }

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace TiketBioskop
 {
-    public partial class Kursi : Form
+    public partial class FormAdminStudio : Form
     {
-        public Kursi()
+        public FormAdminStudio()
         {
             InitializeComponent();
         }
