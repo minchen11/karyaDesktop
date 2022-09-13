@@ -32,6 +32,7 @@ namespace TiketBioskop
             try
             {
                 conn.koneksi.Open();
+                CBX_JamTayang.Items.Clear();
                 string jadwal = "select jam_tayang,poster from film where nama_film = @namafilm";
                 MySqlCommand query = new MySqlCommand(jadwal, conn.koneksi);
                 query.Parameters.AddWithValue("@namafilm", CBX_NamaFilm.Text);
@@ -41,7 +42,15 @@ namespace TiketBioskop
 
                 while (read.Read())
                 {
-                     CBX_JamTayang.Text = read.GetString("jam_tayang");
+                    //yang lama
+                     //CBX_JamTayang.Text = read.GetString("jam_tayang");
+
+                    //yang baru
+                    CBX_JamTayang.Items.Add(read.GetString("jam_tayang"));
+
+                    PB1.Image = Image.FromFile(read.GetString("poster"));
+                    PB1.SizeMode = PictureBoxSizeMode.Zoom;
+
                     //CBX_JamTayang.Items.AddRange("jam_tayang");
                 }
                 conn.koneksi.Close();
