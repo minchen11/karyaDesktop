@@ -15,8 +15,8 @@ namespace TiketBioskop
     public partial class Login : Form
     {
         readonly Koneksi conn = new Koneksi();
-        MySqlCommand check_data;
-        MySqlDataReader baca;
+       // MySqlDataReader baca;
+        //readonly string admin_level;
 
         public Login()
         {
@@ -31,28 +31,44 @@ namespace TiketBioskop
         private void BTNLogin_Click(object sender, EventArgs e)
         {
             conn.koneksi.Open();
-            check_data = new MySqlCommand("select * from account where username = '" + TXTName.Text + "' AND password = '" + TXTPassword.Text + "'", conn.koneksi);
+            MySqlCommand check_data = new MySqlCommand("select * from account where username = '" + TXTName.Text + "' AND password = '" + TXTPassword.Text + "'", conn.koneksi);
 
-            baca=check_data.ExecuteReader();
+            //check_data.Parameters.AddWithValue("@adminlevel", admin_level);
 
-         
-            if (baca.Read()) 
+            MySqlDataReader baca=check_data.ExecuteReader();
+
+            if (baca.Read())
             { 
                 FilmDanJadwal a = new FilmDanJadwal();
                 a.Show();
                 this.Hide();
+
+                string AdminLevelCheck =baca.GetString(baca.GetOrdinal ("admin_level"));
+              
+                if (baca.HasRows)
+                {
+                    if (AdminLevelCheck== "Administrator")
+                    {
+                        a.Filmdanjadwal = "Administrator";
+                        a.adminToolStripMenuItem.Enabled=true;
+                    }
+                    else
+                    {
+                        a.Filmdanjadwal = "Operator";
+                        a.adminToolStripMenuItem.Enabled = false;
+                    }
+                }
              }
             else
             {
                 MessageBox.Show("Username atau password salah");
             }
-            
+
             conn.koneksi.Close();
-            baca.Close();
+           
       
         }
 
-        //Kondisi untuk show password
         private void CCBPassword_CheckedChanged(object sender, EventArgs e)
         {
             if (CCBPassword.Checked == true)
@@ -65,7 +81,6 @@ namespace TiketBioskop
             }
         }
 
-        //fungsi untuk password jadi bullet
         private void TXTPassword_TextChanged(object sender, EventArgs e)
         {
             TXTPassword.UseSystemPasswordChar = true;

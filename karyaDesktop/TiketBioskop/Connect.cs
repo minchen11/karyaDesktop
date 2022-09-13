@@ -38,7 +38,7 @@ namespace TiketBioskop
             try
             {
                 koneksi.Open();
-                MySqlCommand query = new MySqlCommand("select id_film,nama_film,jadwal_tayang,jam_tayang,poster from film group by nama_film", koneksi);
+                MySqlCommand query = new MySqlCommand("select distinct id_film,nama_film,jadwal_tayang,jam_tayang,poster from film", koneksi);
                 MySqlDataAdapter DataAdapter = new MySqlDataAdapter(query);
                 DataAdapter.Fill(Table);
             }
