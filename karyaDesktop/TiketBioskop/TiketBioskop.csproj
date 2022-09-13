@@ -63,6 +63,30 @@
     <Compile Include="admin.Designer.cs">
       <DependentUpon>admin.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormUserAkun.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUserAkun.Designer.cs">
+      <DependentUpon>FormUserAkun.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAdminAkun.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAdminAkun.Designer.cs">
+      <DependentUpon>FormAdminAkun.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAdminStudio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAdminStudio.Designer.cs">
+      <DependentUpon>FormAdminStudio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAdminFilm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAdminFilm.Designer.cs">
+      <DependentUpon>FormAdminFilm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Kursi.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,6 +113,18 @@
     <EmbeddedResource Include="FilmDanJadwal.resx">
       <DependentUpon>FilmDanJadwal.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormUserAkun.resx">
+      <DependentUpon>FormUserAkun.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAdminAkun.resx">
+      <DependentUpon>FormAdminAkun.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAdminFilm.resx">
+      <DependentUpon>FormAdminFilm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAdminStudio.resx">
+      <DependentUpon>FormAdminStudio.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Kursi.resx">
       <DependentUpon>Kursi.cs</DependentUpon>
     </EmbeddedResource>
@@ -106,7 +142,6 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\DataSources\admin.datasource" />
     <None Include="Properties\DataSources\FilmDanJadwal.datasource" />
@@ -231,36 +266,6 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\_Cokelat Putih Minimalis Desktop Wallpaper %282%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\_Cokelat Putih Minimalis Desktop Wallpaper %284%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Logo Lingkaran Digambar Tangan %281%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\loog cinema.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\loog cinema1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\user.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\padlock.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\admin design.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\loog_cinema-removebg-preview.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\walpaper.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

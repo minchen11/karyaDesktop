@@ -16,17 +16,5 @@ namespace TiketBioskop
         {
             InitializeComponent();
         }
-
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-         
-        }
-
-        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            this.Hide();
-            FilmDanJadwal a = new FilmDanJadwal();
-            a.Show();
-        }
     }
 }
