@@ -52,3 +52,63 @@ D:\karyaTerbaru\karyaDesktop\karyaDesktop\TiketBioskop\obj\Debug\TiketBioskop.cs
 D:\karyaTerbaru\karyaDesktop\karyaDesktop\TiketBioskop\obj\Debug\TiketBioskop.csproj.CopyComplete
 D:\karyaTerbaru\karyaDesktop\karyaDesktop\TiketBioskop\obj\Debug\TiketBioskop.exe
 D:\karyaTerbaru\karyaDesktop\karyaDesktop\TiketBioskop\obj\Debug\TiketBioskop.pdb
+D:\karyaDesktop\karyaDesktop\TiketBioskop\bin\Debug\TiketBioskop.exe.config
+D:\karyaDesktop\karyaDesktop\TiketBioskop\bin\Debug\TiketBioskop.exe
+D:\karyaDesktop\karyaDesktop\TiketBioskop\bin\Debug\TiketBioskop.pdb
+D:\karyaDesktop\karyaDesktop\TiketBioskop\obj\Debug\TiketBioskop.csproj.AssemblyReference.cache
+D:\karyaDesktop\karyaDesktop\TiketBioskop\obj\Debug\TiketBioskop.csproj.SuggestedBindingRedirects.cache
+D:\karyaDesktop\karyaDesktop\TiketBioskop\obj\Debug\TiketBioskop.admin.resources
+D:\karyaDesktop\karyaDesktop\TiketBioskop\obj\Debug\TiketBioskop.FilmDanJadwal.resources
+D:\karyaDesktop\karyaDesktop\TiketBioskop\obj\Debug\TiketBioskop.FormUserAkun.resources
+D:\karyaDesktop\karyaDesktop\TiketBioskop\obj\Debug\TiketBioskop.FormAdminAkun.resources
+D:\karyaDesktop\karyaDesktop\TiketBioskop\obj\Debug\TiketBioskop.FormAdminFilm.resources
+D:\karyaDesktop\karyaDesktop\TiketBioskop\obj\Debug\TiketBioskop.FormAdminStudio.resources
+D:\karyaDesktop\karyaDesktop\TiketBioskop\obj\Debug\TiketBioskop.Kursi.resources
+D:\karyaDesktop\karyaDesktop\TiketBioskop\obj\Debug\TiketBioskop.Login.resources
+D:\karyaDesktop\karyaDesktop\TiketBioskop\obj\Debug\TiketBioskop.PreviewTiket.resources
+D:\karyaDesktop\karyaDesktop\TiketBioskop\obj\Debug\TiketBioskop.Properties.Resources.resources
+D:\karyaDesktop\karyaDesktop\TiketBioskop\obj\Debug\TiketBioskop.csproj.GenerateResource.cache
+D:\karyaDesktop\karyaDesktop\TiketBioskop\obj\Debug\TiketBioskop.csproj.CoreCompileInputs.cache
+D:\karyaDesktop\karyaDesktop\TiketBioskop\obj\Debug\TiketBioskop.csproj.CopyComplete
+D:\karyaDesktop\karyaDesktop\TiketBioskop\obj\Debug\TiketBioskop.exe
+D:\karyaDesktop\karyaDesktop\TiketBioskop\obj\Debug\TiketBioskop.pdb
+D:\regi ori\karyaDesktop\karyaDesktop\TiketBioskop\bin\Debug\TiketBioskop.exe.config
+D:\regi ori\karyaDesktop\karyaDesktop\TiketBioskop\bin\Debug\TiketBioskop.exe
+D:\regi ori\karyaDesktop\karyaDesktop\TiketBioskop\bin\Debug\TiketBioskop.pdb
+D:\regi ori\karyaDesktop\karyaDesktop\TiketBioskop\obj\Debug\TiketBioskop.csproj.AssemblyReference.cache
+D:\regi ori\karyaDesktop\karyaDesktop\TiketBioskop\obj\Debug\TiketBioskop.csproj.SuggestedBindingRedirects.cache
+D:\regi ori\karyaDesktop\karyaDesktop\TiketBioskop\obj\Debug\TiketBioskop.admin.resources
+D:\regi ori\karyaDesktop\karyaDesktop\TiketBioskop\obj\Debug\TiketBioskop.FilmDanJadwal.resources
+D:\regi ori\karyaDesktop\karyaDesktop\TiketBioskop\obj\Debug\TiketBioskop.FormUserAkun.resources
+D:\regi ori\karyaDesktop\karyaDesktop\TiketBioskop\obj\Debug\TiketBioskop.FormAdminAkun.resources
+D:\regi ori\karyaDesktop\karyaDesktop\TiketBioskop\obj\Debug\TiketBioskop.FormAdminFilm.resources
+D:\regi ori\karyaDesktop\karyaDesktop\TiketBioskop\obj\Debug\TiketBioskop.FormAdminStudio.resources
+D:\regi ori\karyaDesktop\karyaDesktop\TiketBioskop\obj\Debug\TiketBioskop.Kursi.resources
+D:\regi ori\karyaDesktop\karyaDesktop\TiketBioskop\obj\Debug\TiketBioskop.Login.resources
+D:\regi ori\karyaDesktop\karyaDesktop\TiketBioskop\obj\Debug\TiketBioskop.PreviewTiket.resources
+D:\regi ori\karyaDesktop\karyaDesktop\TiketBioskop\obj\Debug\TiketBioskop.Properties.Resources.resources
+D:\regi ori\karyaDesktop\karyaDesktop\TiketBioskop\obj\Debug\TiketBioskop.csproj.GenerateResource.cache
+D:\regi ori\karyaDesktop\karyaDesktop\TiketBioskop\obj\Debug\TiketBioskop.csproj.CoreCompileInputs.cache
+D:\regi ori\karyaDesktop\karyaDesktop\TiketBioskop\obj\Debug\TiketBioskop.csproj.CopyComplete
+D:\regi ori\karyaDesktop\karyaDesktop\TiketBioskop\obj\Debug\TiketBioskop.exe
+D:\regi ori\karyaDesktop\karyaDesktop\TiketBioskop\obj\Debug\TiketBioskop.pdb
+D:\karyaDesktop\TiketBioskop\bin\Debug\TiketBioskop.exe.config
+D:\karyaDesktop\TiketBioskop\bin\Debug\TiketBioskop.exe
+D:\karyaDesktop\TiketBioskop\bin\Debug\TiketBioskop.pdb
+D:\karyaDesktop\TiketBioskop\obj\Debug\TiketBioskop.csproj.AssemblyReference.cache
+D:\karyaDesktop\TiketBioskop\obj\Debug\TiketBioskop.csproj.SuggestedBindingRedirects.cache
+D:\karyaDesktop\TiketBioskop\obj\Debug\TiketBioskop.admin.resources
+D:\karyaDesktop\TiketBioskop\obj\Debug\TiketBioskop.FilmDanJadwal.resources
+D:\karyaDesktop\TiketBioskop\obj\Debug\TiketBioskop.FormUserAkun.resources
+D:\karyaDesktop\TiketBioskop\obj\Debug\TiketBioskop.FormAdminAkun.resources
+D:\karyaDesktop\TiketBioskop\obj\Debug\TiketBioskop.FormAdminFilm.resources
+D:\karyaDesktop\TiketBioskop\obj\Debug\TiketBioskop.FormAdminStudio.resources
+D:\karyaDesktop\TiketBioskop\obj\Debug\TiketBioskop.Kursi.resources
+D:\karyaDesktop\TiketBioskop\obj\Debug\TiketBioskop.Login.resources
+D:\karyaDesktop\TiketBioskop\obj\Debug\TiketBioskop.PreviewTiket.resources
+D:\karyaDesktop\TiketBioskop\obj\Debug\TiketBioskop.Properties.Resources.resources
+D:\karyaDesktop\TiketBioskop\obj\Debug\TiketBioskop.csproj.GenerateResource.cache
+D:\karyaDesktop\TiketBioskop\obj\Debug\TiketBioskop.csproj.CoreCompileInputs.cache
+D:\karyaDesktop\TiketBioskop\obj\Debug\TiketBioskop.csproj.CopyComplete
+D:\karyaDesktop\TiketBioskop\obj\Debug\TiketBioskop.exe
+D:\karyaDesktop\TiketBioskop\obj\Debug\TiketBioskop.pdb

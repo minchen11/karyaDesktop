@@ -53,5 +53,10 @@ namespace TiketBioskop
         {
             this.Hide();
         }
+
+        private void FormUserAkun_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

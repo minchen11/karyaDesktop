@@ -71,6 +71,7 @@ namespace TiketBioskop
 
         private void adminToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            this.Hide();
             admin a = new admin();
             a.Show();
          

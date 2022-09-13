@@ -28,6 +28,16 @@ namespace TiketBioskop
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             this.Hide();
+            FilmDanJadwal a = new FilmDanJadwal();
+            a.Show();
+
+            if (a.adminToolStripMenuItem.Enabled == true)
+                a.adminLevelToolStripMenuItem.Text = "Administrator";
+            else
+                a.adminLevelToolStripMenuItem.Text = "Operator";
+
+
+           
             
         }
 
