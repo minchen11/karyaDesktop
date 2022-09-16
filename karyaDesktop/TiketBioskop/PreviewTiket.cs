@@ -12,9 +12,21 @@ namespace TiketBioskop
 {
     public partial class PreviewTiket : Form
     {
+        Koneksi conn = new Koneksi();
+        string jam_tayang, nama_film;
+
+        private void lblLinkBack_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Kursi a = new Kursi();
+            a.Show();
+            this.Hide();
+        }
+
         public PreviewTiket()
         {
             InitializeComponent();
         }
+            
+          
     }
 }

@@ -31,7 +31,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.Film = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
             this.BTN_akun = new System.Windows.Forms.Button();
             this.BTN_Studio = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -45,7 +44,6 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.panel1.Controls.Add(this.linkLabel1);
             this.panel1.Controls.Add(this.Film);
-            this.panel1.Controls.Add(this.button4);
             this.panel1.Controls.Add(this.BTN_akun);
             this.panel1.Controls.Add(this.BTN_Studio);
             this.panel1.Controls.Add(this.panel2);
@@ -69,7 +67,7 @@
             // Film
             // 
             this.Film.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Film.Location = new System.Drawing.Point(44, 353);
+            this.Film.Location = new System.Drawing.Point(44, 387);
             this.Film.Name = "Film";
             this.Film.Size = new System.Drawing.Size(173, 43);
             this.Film.TabIndex = 6;
@@ -77,20 +75,10 @@
             this.Film.UseVisualStyleBackColor = true;
             this.Film.Click += new System.EventHandler(this.Film_Click);
             // 
-            // button4
-            // 
-            this.button4.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(44, 421);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(173, 43);
-            this.button4.TabIndex = 5;
-            this.button4.Text = "Admin";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
             // BTN_akun
             // 
             this.BTN_akun.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTN_akun.Location = new System.Drawing.Point(44, 282);
+            this.BTN_akun.Location = new System.Drawing.Point(44, 316);
             this.BTN_akun.Name = "BTN_akun";
             this.BTN_akun.Size = new System.Drawing.Size(173, 43);
             this.BTN_akun.TabIndex = 4;
@@ -101,7 +89,7 @@
             // BTN_Studio
             // 
             this.BTN_Studio.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTN_Studio.Location = new System.Drawing.Point(44, 210);
+            this.BTN_Studio.Location = new System.Drawing.Point(44, 244);
             this.BTN_Studio.Name = "BTN_Studio";
             this.BTN_Studio.Size = new System.Drawing.Size(173, 43);
             this.BTN_Studio.TabIndex = 3;
@@ -147,7 +135,6 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button BTN_akun;
         private System.Windows.Forms.Button BTN_Studio;
         private System.Windows.Forms.Button Film;

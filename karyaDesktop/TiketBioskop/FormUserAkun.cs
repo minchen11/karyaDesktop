@@ -32,7 +32,7 @@ namespace TiketBioskop
             {
                 try
                 {
-                    MySqlCommand update = new MySqlCommand("update account set password='" + TXT_PassBaru.Text + "'",conn.koneksi);
+                    MySqlCommand update = new MySqlCommand("update account set password='" + TXT_PassBaru.Text + "' where username='" + TXT_username.Text + "' and password='" + TXT_PassLama.Text+ "'",conn.koneksi);
                     MySqlDataAdapter Dataadapter = new MySqlDataAdapter(update);
                     update.ExecuteNonQuery();
                     MessageBox.Show("Password Berhasil Diubah");
@@ -54,9 +54,6 @@ namespace TiketBioskop
             this.Hide();
         }
 
-        private void FormUserAkun_Load(object sender, EventArgs e)
-        {
-
-        }
+    
     }
 }

@@ -1,14 +1,9 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Drawing.Imaging;
+
 
 namespace TiketBioskop
 {
@@ -16,16 +11,15 @@ namespace TiketBioskop
     {
         readonly Koneksi conn = new Koneksi();
 
-       
-
         public FilmDanJadwal()
         {
             InitializeComponent();
-            CBX_NamaFilm.DataSource = conn.showdatafilm();
-            CBX_NamaFilm.ValueMember = "nama_film";
-            CBX_NamaFilm.DisplayMember = "nama_film";
-           
+            CBX_NamaFilm.DataSource = datafilm();
+            CBX_NamaFilm.ValueMember = "id_film";
+            CBX_NamaFilm.DisplayMember = "nama_film";  
         }
+
+       
 
         private void CBX_NamaFilm_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -53,13 +47,13 @@ namespace TiketBioskop
 
                     //CBX_JamTayang.Items.AddRange("jam_tayang");
                 }
-                conn.koneksi.Close();
 
             }
             catch (Exception error)
             {
                 MessageBox.Show("error: " + error.Message);
             }
+            conn.koneksi.Close();
         }
 
         public string Filmdanjadwal
@@ -81,6 +75,42 @@ namespace TiketBioskop
         {
             FormUserAkun a = new FormUserAkun();
             a.Show();
+        }
+
+        private void BTN_Next_Click(object sender, EventArgs e)
+        {
+            PreviewTiket b = new PreviewTiket();
+            Kursi a = new Kursi();
+            b.LBL_Studio.Text = CBX_NamaFilm.SelectedValue.ToString();
+            a.Show();
+            this.Hide();
+            
+        }
+
+        public DataTable datafilm()
+        {
+            DataTable Table = new DataTable();
+            try
+            {
+                conn.koneksi.Close();
+                MySqlCommand query = new MySqlCommand("select id_studio,id_film,nama_film,jadwal_tayang,jam_tayang,poster from film group by nama_film", conn.koneksi);
+                MySqlDataAdapter DataAdapter = new MySqlDataAdapter(query);
+                DataAdapter.Fill(Table);
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show("error" + error.Message);
+            }
+
+            conn.koneksi.Close();
+            return Table;
+        }
+
+        private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Login a =  new Login();
+            a.Show();
+            this.Close();
         }
     }
 }

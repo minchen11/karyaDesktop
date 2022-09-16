@@ -13,7 +13,7 @@ namespace TiketBioskop
 		public MySqlConnection koneksi = new MySqlConnection("server=localhost;database=dbbioskop;uid=root;pass=;Convert Zero Datetime=True");
 
 
-		public DataTable showdata(string namatable)
+	/*	public DataTable showdata()
 		{
 			DataTable Table = new DataTable();
 			try
@@ -30,7 +30,7 @@ namespace TiketBioskop
 
 			koneksi.Close();
 			return Table;
-		}
+		}*/
 
 		public DataTable showdatafilm()
 		{
@@ -38,7 +38,7 @@ namespace TiketBioskop
             try
             {
                 koneksi.Open();
-                MySqlCommand query = new MySqlCommand("select id_film,nama_film,jadwal_tayang,jam_tayang,poster from film group by nama_film", koneksi);
+                MySqlCommand query = new MySqlCommand("select id_film,nama_film,jadwal_tayang,jam_tayang,poster,id_studio from film", koneksi);
                 MySqlDataAdapter DataAdapter = new MySqlDataAdapter(query);
                 DataAdapter.Fill(Table);
             }

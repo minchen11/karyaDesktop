@@ -16,11 +16,15 @@ namespace TiketBioskop
         readonly Koneksi conn = new Koneksi();
         DataSet data = new DataSet();
         string id_film;
+        FilmDanJadwal a = new FilmDanJadwal();
 
         public FormAdminFilm()
         {
             InitializeComponent();
             tampilkandatafilm();
+            CBX_Studio.DataSource = datastudio();
+            CBX_Studio.ValueMember = "id_studio";
+            CBX_Studio.DisplayMember = "nama_studio";
         }
 
         //Menampilkan data film
@@ -33,6 +37,7 @@ namespace TiketBioskop
             dataGridView2.Columns[2].HeaderText = "Jadwal Tayang";
             dataGridView2.Columns[3].HeaderText = "Jam Tayang";
             dataGridView2.Columns[4].HeaderText = "Poster";
+            dataGridView2.Columns[5].HeaderText = "Studio";
         }
 
         private void BTN_TambahFilm_Click(object sender, EventArgs e)
@@ -40,7 +45,7 @@ namespace TiketBioskop
             try
             {
                 //string create = "insert into film (nama_film,jadwal_tayang,jam_tayang,poster) values ('" + TXT_JudulFilm.Text + "','" + DTP_JadwalTayang.Text + "','" + TXT_JamTayang.Text + "','" + Poster.Text + "')";
-                string create = "insert into film (nama_film,jadwal_tayang,jam_tayang,poster) values ('" + TXT_JudulFilm.Text + "','" + DTP_JadwalTayang.Text + "','" + TXT_JamTayang.Text + "', @poster)";
+                string create = "insert into film (nama_film,jadwal_tayang,jam_tayang,poster,id_studio) values ('" + TXT_JudulFilm.Text + "','" + DTP_JadwalTayang.Text + "','" + TXT_JamTayang.Text + "', @poster,'"+CBX_Studio.SelectedValue+"')";
                 conn.koneksi.Open();
                 MySqlCommand query = new MySqlCommand(create, conn.koneksi);
                 query.Parameters.AddWithValue("@poster", Poster.Text);
@@ -118,32 +123,9 @@ namespace TiketBioskop
             DTP_JadwalTayang.Text = "";
             TXT_JamTayang.Clear();
             PB1.Image = null;
-
         }
 
-        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-                conn.koneksi.Open();
-            try
-            {
-                id_film = dataGridView2.Rows[e.RowIndex].Cells[0].Value.ToString();
-                TXT_JudulFilm.Text = dataGridView2.Rows[e.RowIndex].Cells[1].Value.ToString();
-                DTP_JadwalTayang.Text = dataGridView2.Rows[e.RowIndex].Cells[2].Value.ToString();
-                TXT_JamTayang.Text = dataGridView2.Rows[e.RowIndex].Cells[3].Value.ToString();
-                //PB1.ImageLocation = dataGridView2.Rows[e.RowIndex].Cells[4].Value.ToString();
-                //PB1.SizeMode = PictureBoxSizeMode.Zoom;
-                string a = dataGridView2.Rows[e.RowIndex].Cells[4].Value.ToString();
-                conn.koneksi.Close();
-                PB1.Image = Image.FromFile(a);
-                PB1.SizeMode = PictureBoxSizeMode.Zoom;
-                Poster.Text = PB1.ImageLocation;
-            }
-            catch (Exception error)
-            {
-                MessageBox.Show("error: " + error.Message);
-            }
-            conn.koneksi.Close();
-        }
+      
 
         private void PB1_Click(object sender, EventArgs e)
         {
@@ -153,5 +135,50 @@ namespace TiketBioskop
             PB1.ImageLocation = Bukafoto.FileName;
             Poster.Text = PB1.ImageLocation;
         }
+
+        private void dataGridView2_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            conn.koneksi.Open();
+            try
+            {
+                id_film = dataGridView2.Rows[e.RowIndex].Cells[0].Value.ToString();
+                TXT_JudulFilm.Text = dataGridView2.Rows[e.RowIndex].Cells[1].Value.ToString();
+                DTP_JadwalTayang.Text = dataGridView2.Rows[e.RowIndex].Cells[2].Value.ToString();
+                TXT_JamTayang.Text = dataGridView2.Rows[e.RowIndex].Cells[3].Value.ToString();
+                //PB1.ImageLocation = dataGridView2.Rows[e.RowIndex].Cells[4].Value.ToString();
+                //PB1.SizeMode = PictureBoxSizeMode.Zoom;
+                CBX_Studio.Text = dataGridView2.Rows[e.RowIndex].Cells[5].Value.ToString();
+                string a = dataGridView2.Rows[e.RowIndex].Cells[4].Value.ToString();
+                conn.koneksi.Close();
+                PB1.Image = Image.FromFile(a);
+                PB1.SizeMode = PictureBoxSizeMode.Zoom;
+                Poster.Text = a;
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show("error: " + error.Message);
+            }
+            conn.koneksi.Close();
+        }
+
+        public DataTable datastudio()
+        {
+            DataTable Table = new DataTable();
+            try
+            {
+                conn.koneksi.Close();
+                MySqlCommand query = new MySqlCommand("select * from studio group by nama_studio", conn.koneksi);
+                MySqlDataAdapter DataAdapter = new MySqlDataAdapter(query);
+                DataAdapter.Fill(Table);
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show("error" + error.Message);
+            }
+
+            conn.koneksi.Close();
+            return Table;
+        }
+
     }
 }

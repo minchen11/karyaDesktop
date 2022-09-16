@@ -36,9 +36,6 @@ namespace TiketBioskop
             else
                 a.adminLevelToolStripMenuItem.Text = "Operator";
 
-
-           
-            
         }
 
         private void BTN_Studio_Click(object sender, EventArgs e)

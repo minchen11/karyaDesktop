@@ -61,13 +61,15 @@
             this.CCBC2 = new System.Windows.Forms.CheckBox();
             this.CCBC1 = new System.Windows.Forms.CheckBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.BTN_Back = new System.Windows.Forms.LinkLabel();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // CCBA1
             // 
             this.CCBA1.AutoSize = true;
             this.CCBA1.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.CCBA1.Location = new System.Drawing.Point(45, 82);
+            this.CCBA1.Location = new System.Drawing.Point(45, 161);
             this.CCBA1.Margin = new System.Windows.Forms.Padding(4);
             this.CCBA1.Name = "CCBA1";
             this.CCBA1.Size = new System.Drawing.Size(45, 20);
@@ -79,7 +81,7 @@
             // 
             this.CCBA2.AutoSize = true;
             this.CCBA2.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.CCBA2.Location = new System.Drawing.Point(112, 82);
+            this.CCBA2.Location = new System.Drawing.Point(112, 161);
             this.CCBA2.Margin = new System.Windows.Forms.Padding(4);
             this.CCBA2.Name = "CCBA2";
             this.CCBA2.Size = new System.Drawing.Size(45, 20);
@@ -91,7 +93,7 @@
             // 
             this.CCBA4.AutoSize = true;
             this.CCBA4.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.CCBA4.Location = new System.Drawing.Point(241, 82);
+            this.CCBA4.Location = new System.Drawing.Point(241, 161);
             this.CCBA4.Margin = new System.Windows.Forms.Padding(4);
             this.CCBA4.Name = "CCBA4";
             this.CCBA4.Size = new System.Drawing.Size(45, 20);
@@ -103,7 +105,7 @@
             // 
             this.CCBA3.AutoSize = true;
             this.CCBA3.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.CCBA3.Location = new System.Drawing.Point(177, 82);
+            this.CCBA3.Location = new System.Drawing.Point(177, 161);
             this.CCBA3.Margin = new System.Windows.Forms.Padding(4);
             this.CCBA3.Name = "CCBA3";
             this.CCBA3.Size = new System.Drawing.Size(45, 20);
@@ -115,7 +117,7 @@
             // 
             this.CCBA8.AutoSize = true;
             this.CCBA8.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.CCBA8.Location = new System.Drawing.Point(544, 82);
+            this.CCBA8.Location = new System.Drawing.Point(544, 161);
             this.CCBA8.Margin = new System.Windows.Forms.Padding(4);
             this.CCBA8.Name = "CCBA8";
             this.CCBA8.Size = new System.Drawing.Size(45, 20);
@@ -127,7 +129,7 @@
             // 
             this.CCBA7.AutoSize = true;
             this.CCBA7.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.CCBA7.Location = new System.Drawing.Point(479, 82);
+            this.CCBA7.Location = new System.Drawing.Point(479, 161);
             this.CCBA7.Margin = new System.Windows.Forms.Padding(4);
             this.CCBA7.Name = "CCBA7";
             this.CCBA7.Size = new System.Drawing.Size(45, 20);
@@ -139,7 +141,7 @@
             // 
             this.CCBA6.AutoSize = true;
             this.CCBA6.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.CCBA6.Location = new System.Drawing.Point(412, 82);
+            this.CCBA6.Location = new System.Drawing.Point(412, 161);
             this.CCBA6.Margin = new System.Windows.Forms.Padding(4);
             this.CCBA6.Name = "CCBA6";
             this.CCBA6.Size = new System.Drawing.Size(45, 20);
@@ -151,7 +153,7 @@
             // 
             this.CCBA5.AutoSize = true;
             this.CCBA5.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.CCBA5.Location = new System.Drawing.Point(348, 82);
+            this.CCBA5.Location = new System.Drawing.Point(348, 161);
             this.CCBA5.Margin = new System.Windows.Forms.Padding(4);
             this.CCBA5.Name = "CCBA5";
             this.CCBA5.Size = new System.Drawing.Size(45, 20);
@@ -163,7 +165,7 @@
             // 
             this.CCBB8.AutoSize = true;
             this.CCBB8.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.CCBB8.Location = new System.Drawing.Point(544, 123);
+            this.CCBB8.Location = new System.Drawing.Point(544, 202);
             this.CCBB8.Margin = new System.Windows.Forms.Padding(4);
             this.CCBB8.Name = "CCBB8";
             this.CCBB8.Size = new System.Drawing.Size(45, 20);
@@ -175,7 +177,7 @@
             // 
             this.CCBB7.AutoSize = true;
             this.CCBB7.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.CCBB7.Location = new System.Drawing.Point(477, 123);
+            this.CCBB7.Location = new System.Drawing.Point(477, 202);
             this.CCBB7.Margin = new System.Windows.Forms.Padding(4);
             this.CCBB7.Name = "CCBB7";
             this.CCBB7.Size = new System.Drawing.Size(45, 20);
@@ -187,7 +189,7 @@
             // 
             this.CCBB6.AutoSize = true;
             this.CCBB6.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.CCBB6.Location = new System.Drawing.Point(412, 123);
+            this.CCBB6.Location = new System.Drawing.Point(412, 202);
             this.CCBB6.Margin = new System.Windows.Forms.Padding(4);
             this.CCBB6.Name = "CCBB6";
             this.CCBB6.Size = new System.Drawing.Size(45, 20);
@@ -199,7 +201,7 @@
             // 
             this.CCBB5.AutoSize = true;
             this.CCBB5.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.CCBB5.Location = new System.Drawing.Point(348, 123);
+            this.CCBB5.Location = new System.Drawing.Point(348, 202);
             this.CCBB5.Margin = new System.Windows.Forms.Padding(4);
             this.CCBB5.Name = "CCBB5";
             this.CCBB5.Size = new System.Drawing.Size(45, 20);
@@ -211,7 +213,7 @@
             // 
             this.CCBB4.AutoSize = true;
             this.CCBB4.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.CCBB4.Location = new System.Drawing.Point(241, 123);
+            this.CCBB4.Location = new System.Drawing.Point(241, 202);
             this.CCBB4.Margin = new System.Windows.Forms.Padding(4);
             this.CCBB4.Name = "CCBB4";
             this.CCBB4.Size = new System.Drawing.Size(45, 20);
@@ -223,7 +225,7 @@
             // 
             this.CCBB3.AutoSize = true;
             this.CCBB3.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.CCBB3.Location = new System.Drawing.Point(177, 123);
+            this.CCBB3.Location = new System.Drawing.Point(177, 202);
             this.CCBB3.Margin = new System.Windows.Forms.Padding(4);
             this.CCBB3.Name = "CCBB3";
             this.CCBB3.Size = new System.Drawing.Size(45, 20);
@@ -235,7 +237,7 @@
             // 
             this.CCBB2.AutoSize = true;
             this.CCBB2.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.CCBB2.Location = new System.Drawing.Point(112, 123);
+            this.CCBB2.Location = new System.Drawing.Point(112, 202);
             this.CCBB2.Margin = new System.Windows.Forms.Padding(4);
             this.CCBB2.Name = "CCBB2";
             this.CCBB2.Size = new System.Drawing.Size(45, 20);
@@ -247,7 +249,7 @@
             // 
             this.CCBB1.AutoSize = true;
             this.CCBB1.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.CCBB1.Location = new System.Drawing.Point(45, 123);
+            this.CCBB1.Location = new System.Drawing.Point(45, 202);
             this.CCBB1.Margin = new System.Windows.Forms.Padding(4);
             this.CCBB1.Name = "CCBB1";
             this.CCBB1.Size = new System.Drawing.Size(45, 20);
@@ -259,7 +261,7 @@
             // 
             this.CCBD8.AutoSize = true;
             this.CCBD8.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.CCBD8.Location = new System.Drawing.Point(543, 225);
+            this.CCBD8.Location = new System.Drawing.Point(543, 304);
             this.CCBD8.Margin = new System.Windows.Forms.Padding(4);
             this.CCBD8.Name = "CCBD8";
             this.CCBD8.Size = new System.Drawing.Size(46, 20);
@@ -271,7 +273,7 @@
             // 
             this.CCBD7.AutoSize = true;
             this.CCBD7.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.CCBD7.Location = new System.Drawing.Point(476, 225);
+            this.CCBD7.Location = new System.Drawing.Point(476, 304);
             this.CCBD7.Margin = new System.Windows.Forms.Padding(4);
             this.CCBD7.Name = "CCBD7";
             this.CCBD7.Size = new System.Drawing.Size(46, 20);
@@ -283,7 +285,7 @@
             // 
             this.CCBD6.AutoSize = true;
             this.CCBD6.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.CCBD6.Location = new System.Drawing.Point(411, 225);
+            this.CCBD6.Location = new System.Drawing.Point(411, 304);
             this.CCBD6.Margin = new System.Windows.Forms.Padding(4);
             this.CCBD6.Name = "CCBD6";
             this.CCBD6.Size = new System.Drawing.Size(46, 20);
@@ -295,7 +297,7 @@
             // 
             this.CCBD5.AutoSize = true;
             this.CCBD5.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.CCBD5.Location = new System.Drawing.Point(347, 225);
+            this.CCBD5.Location = new System.Drawing.Point(347, 304);
             this.CCBD5.Margin = new System.Windows.Forms.Padding(4);
             this.CCBD5.Name = "CCBD5";
             this.CCBD5.Size = new System.Drawing.Size(46, 20);
@@ -307,7 +309,7 @@
             // 
             this.CCBD4.AutoSize = true;
             this.CCBD4.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.CCBD4.Location = new System.Drawing.Point(240, 225);
+            this.CCBD4.Location = new System.Drawing.Point(240, 304);
             this.CCBD4.Margin = new System.Windows.Forms.Padding(4);
             this.CCBD4.Name = "CCBD4";
             this.CCBD4.Size = new System.Drawing.Size(46, 20);
@@ -319,7 +321,7 @@
             // 
             this.CCBD3.AutoSize = true;
             this.CCBD3.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.CCBD3.Location = new System.Drawing.Point(176, 225);
+            this.CCBD3.Location = new System.Drawing.Point(176, 304);
             this.CCBD3.Margin = new System.Windows.Forms.Padding(4);
             this.CCBD3.Name = "CCBD3";
             this.CCBD3.Size = new System.Drawing.Size(46, 20);
@@ -331,7 +333,7 @@
             // 
             this.CCBD2.AutoSize = true;
             this.CCBD2.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.CCBD2.Location = new System.Drawing.Point(111, 225);
+            this.CCBD2.Location = new System.Drawing.Point(111, 304);
             this.CCBD2.Margin = new System.Windows.Forms.Padding(4);
             this.CCBD2.Name = "CCBD2";
             this.CCBD2.Size = new System.Drawing.Size(46, 20);
@@ -343,7 +345,7 @@
             // 
             this.CCBD1.AutoSize = true;
             this.CCBD1.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.CCBD1.Location = new System.Drawing.Point(44, 225);
+            this.CCBD1.Location = new System.Drawing.Point(44, 304);
             this.CCBD1.Margin = new System.Windows.Forms.Padding(4);
             this.CCBD1.Name = "CCBD1";
             this.CCBD1.Size = new System.Drawing.Size(46, 20);
@@ -355,7 +357,7 @@
             // 
             this.CCBC8.AutoSize = true;
             this.CCBC8.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.CCBC8.Location = new System.Drawing.Point(543, 181);
+            this.CCBC8.Location = new System.Drawing.Point(543, 260);
             this.CCBC8.Margin = new System.Windows.Forms.Padding(4);
             this.CCBC8.Name = "CCBC8";
             this.CCBC8.Size = new System.Drawing.Size(45, 20);
@@ -367,7 +369,7 @@
             // 
             this.CCBC7.AutoSize = true;
             this.CCBC7.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.CCBC7.Location = new System.Drawing.Point(477, 181);
+            this.CCBC7.Location = new System.Drawing.Point(477, 260);
             this.CCBC7.Margin = new System.Windows.Forms.Padding(4);
             this.CCBC7.Name = "CCBC7";
             this.CCBC7.Size = new System.Drawing.Size(45, 20);
@@ -379,7 +381,7 @@
             // 
             this.CCBC6.AutoSize = true;
             this.CCBC6.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.CCBC6.Location = new System.Drawing.Point(411, 181);
+            this.CCBC6.Location = new System.Drawing.Point(411, 260);
             this.CCBC6.Margin = new System.Windows.Forms.Padding(4);
             this.CCBC6.Name = "CCBC6";
             this.CCBC6.Size = new System.Drawing.Size(45, 20);
@@ -391,7 +393,7 @@
             // 
             this.CCBC5.AutoSize = true;
             this.CCBC5.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.CCBC5.Location = new System.Drawing.Point(347, 181);
+            this.CCBC5.Location = new System.Drawing.Point(347, 260);
             this.CCBC5.Margin = new System.Windows.Forms.Padding(4);
             this.CCBC5.Name = "CCBC5";
             this.CCBC5.Size = new System.Drawing.Size(45, 20);
@@ -403,7 +405,7 @@
             // 
             this.CCBC4.AutoSize = true;
             this.CCBC4.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.CCBC4.Location = new System.Drawing.Point(240, 181);
+            this.CCBC4.Location = new System.Drawing.Point(240, 260);
             this.CCBC4.Margin = new System.Windows.Forms.Padding(4);
             this.CCBC4.Name = "CCBC4";
             this.CCBC4.Size = new System.Drawing.Size(45, 20);
@@ -415,7 +417,7 @@
             // 
             this.CCBC3.AutoSize = true;
             this.CCBC3.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.CCBC3.Location = new System.Drawing.Point(176, 181);
+            this.CCBC3.Location = new System.Drawing.Point(176, 260);
             this.CCBC3.Margin = new System.Windows.Forms.Padding(4);
             this.CCBC3.Name = "CCBC3";
             this.CCBC3.Size = new System.Drawing.Size(45, 20);
@@ -427,7 +429,7 @@
             // 
             this.CCBC2.AutoSize = true;
             this.CCBC2.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.CCBC2.Location = new System.Drawing.Point(111, 181);
+            this.CCBC2.Location = new System.Drawing.Point(111, 260);
             this.CCBC2.Margin = new System.Windows.Forms.Padding(4);
             this.CCBC2.Name = "CCBC2";
             this.CCBC2.Size = new System.Drawing.Size(45, 20);
@@ -439,7 +441,7 @@
             // 
             this.CCBC1.AutoSize = true;
             this.CCBC1.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.CCBC1.Location = new System.Drawing.Point(44, 181);
+            this.CCBC1.Location = new System.Drawing.Point(44, 260);
             this.CCBC1.Margin = new System.Windows.Forms.Padding(4);
             this.CCBC1.Name = "CCBC1";
             this.CCBC1.Size = new System.Drawing.Size(45, 20);
@@ -453,12 +455,34 @@
             this.label1.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label1.Location = new System.Drawing.Point(172, 286);
+            this.label1.Location = new System.Drawing.Point(172, 365);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(299, 29);
             this.label1.TabIndex = 32;
             this.label1.Text = "LAYAR BIOSKOP DI SINI";
+            // 
+            // BTN_Back
+            // 
+            this.BTN_Back.AutoSize = true;
+            this.BTN_Back.Location = new System.Drawing.Point(12, 9);
+            this.BTN_Back.Name = "BTN_Back";
+            this.BTN_Back.Size = new System.Drawing.Size(56, 16);
+            this.BTN_Back.TabIndex = 33;
+            this.BTN_Back.TabStop = true;
+            this.BTN_Back.Text = "Kembali";
+            this.BTN_Back.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.BTN_Back_LinkClicked);
+            // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Location = new System.Drawing.Point(74, 9);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(77, 16);
+            this.linkLabel1.TabIndex = 34;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Selanjutnya";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // Kursi
             // 
@@ -466,6 +490,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(647, 554);
+            this.Controls.Add(this.linkLabel1);
+            this.Controls.Add(this.BTN_Back);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.CCBD8);
             this.Controls.Add(this.CCBD7);
@@ -501,6 +527,7 @@
             this.Controls.Add(this.CCBA1);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Kursi";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Select Seat";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -542,5 +569,7 @@
         private System.Windows.Forms.CheckBox CCBC2;
         private System.Windows.Forms.CheckBox CCBC1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.LinkLabel BTN_Back;
+        private System.Windows.Forms.LinkLabel linkLabel1;
     }
 }

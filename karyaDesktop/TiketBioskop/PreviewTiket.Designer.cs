@@ -29,34 +29,50 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.LBL_Studio = new System.Windows.Forms.Label();
+            this.lblLinkBack = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(53, 229);
+            this.label1.Location = new System.Drawing.Point(80, 352);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(45, 13);
+            this.label1.Size = new System.Drawing.Size(65, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "Harga : ";
             // 
-            // label2
+            // LBL_Studio
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(53, 202);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(43, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Studio :";
+            this.LBL_Studio.AutoSize = true;
+            this.LBL_Studio.Location = new System.Drawing.Point(80, 311);
+            this.LBL_Studio.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LBL_Studio.Name = "LBL_Studio";
+            this.LBL_Studio.Size = new System.Drawing.Size(63, 20);
+            this.LBL_Studio.TabIndex = 1;
+            this.LBL_Studio.Text = "Studio :";
+            // 
+            // lblLinkBack
+            // 
+            this.lblLinkBack.AutoSize = true;
+            this.lblLinkBack.Location = new System.Drawing.Point(24, 26);
+            this.lblLinkBack.Name = "lblLinkBack";
+            this.lblLinkBack.Size = new System.Drawing.Size(96, 20);
+            this.lblLinkBack.TabIndex = 2;
+            this.lblLinkBack.TabStop = true;
+            this.lblLinkBack.Text = "<<< Kembali";
+            this.lblLinkBack.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblLinkBack_LinkClicked);
             // 
             // PreviewTiket
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(434, 450);
-            this.Controls.Add(this.label2);
+            this.ClientSize = new System.Drawing.Size(651, 692);
+            this.Controls.Add(this.lblLinkBack);
+            this.Controls.Add(this.LBL_Studio);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "PreviewTiket";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -67,6 +83,7 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        public System.Windows.Forms.Label LBL_Studio;
+        private System.Windows.Forms.LinkLabel lblLinkBack;
     }
 }
