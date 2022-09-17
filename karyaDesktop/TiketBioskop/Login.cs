@@ -49,12 +49,12 @@ namespace TiketBioskop
                 {
                     if (AdminLevelCheck== "Administrator")
                     {
-                        a.Filmdanjadwal = "Administrator";
+                        a.AdminLevel = "Administrator";
                         a.adminToolStripMenuItem.Enabled=true;
                     }
                     else
                     {
-                        a.Filmdanjadwal = "Operator";
+                        a.AdminLevel = "Operator";
                         a.adminToolStripMenuItem.Enabled = false;
                     }
                 }

@@ -1,5 +1,6 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,23 +18,22 @@ namespace TiketBioskop
         Koneksi conn = new Koneksi();
         int jumlah_tiket=0;
         FilmDanJadwal a = new FilmDanJadwal();
-        int jumlah = 0;
-        //string[] record;
-
+        public int jumlah = 0;
+        public static List<string> PreviewKursi= new List<string>();
+        public static int hargatiket;
+        
         public Kursi()
         {
             InitializeComponent();
             CekKursi();
-            
         }
-
 
 
         public void CekKursi()
         {
             CheckBox[] kursi = new CheckBox[32];
-            List<string> result = new List<string>();
-            List<string> hari = new List<string>();
+            List<string> KursiTerjual = new List<string>();
+            List<DateTime> tanggal = new List<DateTime>();
 
 
             kursi[0] = CCBA1;
@@ -72,10 +72,9 @@ namespace TiketBioskop
             kursi[30] = CCBD7;
             kursi[31] = CCBD8;
 
-            conn.koneksi.Open();
             try
             {
-        
+                conn.koneksi.Open();
                 MySqlCommand cek = new MySqlCommand("select kursi_terjual,tanggal from tiket", conn.koneksi);
                 MySqlDataAdapter datadapter = new MySqlDataAdapter(cek);
                 cek.ExecuteNonQuery();
@@ -84,9 +83,9 @@ namespace TiketBioskop
                
                 while(read.Read())
                 {
-                    result.Add(read.GetString("kursi_terjual"));
+                    KursiTerjual.Add(read.GetString("kursi_terjual"));
+                    tanggal.Add(read.GetDateTime("tanggal"));
 
-                    hari.Add(read.GetString("tanggal"));
                     jumlah++;
                 }
 
@@ -94,17 +93,11 @@ namespace TiketBioskop
                 {
                     for (int b = 0; b < kursi.Length; b++)
                     {
-                        if (result[a] == kursi[b].Text)
+                        if ((KursiTerjual[a] == kursi[b].Text) && (tanggal[a].ToString("yyyy-MM-dd")==DateTime.Now.ToString("yyyy-MM-dd")))
                         {
-                            kursi[b].Checked = true;
+                           // kursi[b].Checked = true;
                             kursi[b].Enabled = false;
-                            
-                        }
-
-                        if (hari[a] == kursi[b].Text)
-                        {
-                            //kursi[b].Checked = false;
-                            kursi[b].Enabled = true;
+                            kursi[b].BackColor = Color.Red;
                         }
                     }
                 }
@@ -120,15 +113,9 @@ namespace TiketBioskop
 
         private void BTN_Back_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
             FilmDanJadwal a = new FilmDanJadwal();
             a.Show();
             this.Hide();
-
-            if (a.adminToolStripMenuItem.Enabled == true)
-                a.adminLevelToolStripMenuItem.Text = "Administrator";
-            else
-                a.adminLevelToolStripMenuItem.Text = "Operator";
         }
 
         public void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -176,27 +163,28 @@ namespace TiketBioskop
             {
                 if (kursi[i].Checked == true)
                 {
+                   
                     try
                     {
                         conn.koneksi.Open();
-                        MySqlCommand tambah = new MySqlCommand("insert into tiket (id_tiket,kursi_terjual,tanggal) values (null,'" + kursi[i].Text + "','" + DateTime.Now.ToString("yyyyMMdd") + "' )", conn.koneksi);
+                        MySqlCommand tambah = new MySqlCommand("insert into tiket (id_tiket,kursi_terjual,tanggal) values (null,'" + kursi[i].Text + "','" + DateTime.Now.ToString("yyyy-MM-dd") + "' )", conn.koneksi);
                         MySqlDataAdapter datadapter = new MySqlDataAdapter(tambah);
                         tambah.ExecuteNonQuery();
-                        kursi[i].Enabled = false;
                         jumlah_tiket++;
-                        
-                    }catch(Exception error)
+                    }
+                    catch(Exception error)
                     {
                         MessageBox.Show("error: "+ error.Message);
                     }
+                    PreviewKursi.Add(kursi[i].Text);
+                    hargatiket += 40000;
+
                 }
-            conn.koneksi.Close();
+                conn.koneksi.Close();
             }
             PreviewTiket a = new PreviewTiket();
             a.Show();
             this.Hide();
         }
-
-       
     }
 }

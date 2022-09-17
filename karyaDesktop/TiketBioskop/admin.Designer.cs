@@ -41,24 +41,26 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.panel1.BackColor = System.Drawing.Color.Black;
             this.panel1.Controls.Add(this.linkLabel1);
             this.panel1.Controls.Add(this.Film);
             this.panel1.Controls.Add(this.BTN_akun);
             this.panel1.Controls.Add(this.BTN_Studio);
             this.panel1.Controls.Add(this.panel2);
-            this.panel1.Location = new System.Drawing.Point(12, 12);
+            this.panel1.Location = new System.Drawing.Point(9, 10);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(261, 675);
+            this.panel1.Size = new System.Drawing.Size(196, 548);
             this.panel1.TabIndex = 0;
             // 
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel1.Location = new System.Drawing.Point(3, 6);
+            this.linkLabel1.Location = new System.Drawing.Point(2, 5);
+            this.linkLabel1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(56, 25);
+            this.linkLabel1.Size = new System.Drawing.Size(45, 20);
             this.linkLabel1.TabIndex = 7;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Back";
@@ -67,9 +69,10 @@
             // Film
             // 
             this.Film.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Film.Location = new System.Drawing.Point(44, 387);
+            this.Film.Location = new System.Drawing.Point(33, 314);
+            this.Film.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Film.Name = "Film";
-            this.Film.Size = new System.Drawing.Size(173, 43);
+            this.Film.Size = new System.Drawing.Size(130, 35);
             this.Film.TabIndex = 6;
             this.Film.Text = "Film";
             this.Film.UseVisualStyleBackColor = true;
@@ -78,9 +81,10 @@
             // BTN_akun
             // 
             this.BTN_akun.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTN_akun.Location = new System.Drawing.Point(44, 316);
+            this.BTN_akun.Location = new System.Drawing.Point(33, 257);
+            this.BTN_akun.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.BTN_akun.Name = "BTN_akun";
-            this.BTN_akun.Size = new System.Drawing.Size(173, 43);
+            this.BTN_akun.Size = new System.Drawing.Size(130, 35);
             this.BTN_akun.TabIndex = 4;
             this.BTN_akun.Text = "Akun";
             this.BTN_akun.UseVisualStyleBackColor = true;
@@ -89,9 +93,10 @@
             // BTN_Studio
             // 
             this.BTN_Studio.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTN_Studio.Location = new System.Drawing.Point(44, 244);
+            this.BTN_Studio.Location = new System.Drawing.Point(33, 198);
+            this.BTN_Studio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.BTN_Studio.Name = "BTN_Studio";
-            this.BTN_Studio.Size = new System.Drawing.Size(173, 43);
+            this.BTN_Studio.Size = new System.Drawing.Size(130, 35);
             this.BTN_Studio.TabIndex = 3;
             this.BTN_Studio.Text = "Studio";
             this.BTN_Studio.UseVisualStyleBackColor = true;
@@ -99,16 +104,18 @@
             // 
             // panel2
             // 
-            this.panel2.Location = new System.Drawing.Point(305, 3);
+            this.panel2.Location = new System.Drawing.Point(229, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(913, 675);
+            this.panel2.Size = new System.Drawing.Size(685, 548);
             this.panel2.TabIndex = 1;
             // 
             // PanelAdmin
             // 
-            this.PanelAdmin.Location = new System.Drawing.Point(279, 12);
+            this.PanelAdmin.Location = new System.Drawing.Point(209, 10);
+            this.PanelAdmin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.PanelAdmin.Name = "PanelAdmin";
-            this.PanelAdmin.Size = new System.Drawing.Size(948, 675);
+            this.PanelAdmin.Size = new System.Drawing.Size(711, 548);
             this.PanelAdmin.TabIndex = 1;
             // 
             // BukaFoto
@@ -117,11 +124,12 @@
             // 
             // admin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1242, 714);
+            this.ClientSize = new System.Drawing.Size(932, 580);
             this.Controls.Add(this.PanelAdmin);
             this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "admin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Admin Page";

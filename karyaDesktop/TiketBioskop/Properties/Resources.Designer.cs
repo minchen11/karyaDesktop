@@ -63,6 +63,16 @@ namespace TiketBioskop.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _Cokelat_Putih_Minimalis_Desktop_Wallpaper__10_ {
+            get {
+                object obj = ResourceManager.GetObject("_Cokelat Putih Minimalis Desktop Wallpaper (10)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _Cokelat_Putih_Minimalis_Desktop_Wallpaper__4_ {
             get {
                 object obj = ResourceManager.GetObject("_Cokelat Putih Minimalis Desktop Wallpaper (4)", resourceCulture);
@@ -86,6 +96,16 @@ namespace TiketBioskop.Properties {
         internal static System.Drawing.Bitmap admin_design {
             get {
                 object obj = ResourceManager.GetObject("admin design", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ganti_pass {
+            get {
+                object obj = ResourceManager.GetObject("ganti pass", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

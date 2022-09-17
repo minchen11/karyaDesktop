@@ -10,16 +10,19 @@ namespace TiketBioskop
     public partial class FilmDanJadwal : Form
     {
         readonly Koneksi conn = new Koneksi();
+        public static string nama_film = "";
+        public static string jam_tayang = "";
+        
+       
 
         public FilmDanJadwal()
         {
             InitializeComponent();
+
             CBX_NamaFilm.DataSource = datafilm();
-            CBX_NamaFilm.ValueMember = "id_film";
+            CBX_NamaFilm.ValueMember = "nama_film";
             CBX_NamaFilm.DisplayMember = "nama_film";  
         }
-
-       
 
         private void CBX_NamaFilm_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -51,12 +54,12 @@ namespace TiketBioskop
             }
             catch (Exception error)
             {
-                MessageBox.Show("error: " + error.Message);
+                MessageBox.Show("Tidak ada gambar : " + error.Message);
             }
             conn.koneksi.Close();
         }
 
-        public string Filmdanjadwal
+        public string AdminLevel
         {
             set { adminLevelToolStripMenuItem.Text = value; }
             get { return adminLevelToolStripMenuItem.Text; }
@@ -68,7 +71,6 @@ namespace TiketBioskop
             this.Hide();
             admin a = new admin();
             a.Show();
-         
         }
 
         private void ubahPasswordToolStripMenuItem_Click(object sender, EventArgs e)
@@ -79,12 +81,15 @@ namespace TiketBioskop
 
         private void BTN_Next_Click(object sender, EventArgs e)
         {
+            conn.koneksi.Open();
             PreviewTiket b = new PreviewTiket();
             Kursi a = new Kursi();
             b.LBL_Studio.Text = CBX_NamaFilm.SelectedValue.ToString();
             a.Show();
             this.Hide();
-            
+            //CBX_NamaFilm.SelectedValue.ToString() = b.LBL_Studio.Text;
+            jam_tayang = CBX_JamTayang.Text;
+            nama_film = CBX_NamaFilm.Text;
         }
 
         public DataTable datafilm()
@@ -92,7 +97,7 @@ namespace TiketBioskop
             DataTable Table = new DataTable();
             try
             {
-                conn.koneksi.Close();
+                conn.koneksi.Open();
                 MySqlCommand query = new MySqlCommand("select id_studio,id_film,nama_film,jadwal_tayang,jam_tayang,poster from film group by nama_film", conn.koneksi);
                 MySqlDataAdapter DataAdapter = new MySqlDataAdapter(query);
                 DataAdapter.Fill(Table);
